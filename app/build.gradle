@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.debajyoti.spacexinfo"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        releaseConfig {
+            keyAlias GenKeyAlias
+            keyPassword GenKeyPassword
+            storePassword GenKeystorePassword
+            storeFile file('keys/SpaceXInfo.jks')
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Support
+    implementation 'com.android.support:support-v4:28.0.0'
+
+    // Card view
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    // AppCompat
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    // Design
+    implementation 'com.android.support:design:28.0.0'
+
+    // Recyclerview
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    // Constraint Layout
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    // Dagger
+    implementation 'com.google.dagger:dagger-android:2.16'
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    // OkHttpLogging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    // Android Architecture Components
+    implementation 'android.arch.lifecycle:runtime:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    // Room
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+    // Debug Database
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
+
+    // Firebase Analytics
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
+    // Crashlytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.7'
+
+    // Firebase Job Displatcher
+    implementation "com.firebase:firebase-jobdispatcher:0.8.5"
+
+    // Testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".view.main.InfoFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".view.main.InfoFragment">
+
+        <ImageView
+            android:id="@+id/imvSpacexLogo"
+            android:layout_width="@dimen/info_spacex_logo_width"
+            android:layout_height="@dimen/info_spacex_logo_height"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_8"
+            app:srcCompat="@drawable/ic_spacex_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvFounderHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:text="@string/txt_elon_musk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imvSpacexLogo" />
+
+        <TextView
+            android:id="@+id/txvSpacexDesciption"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvFounderHeader"
+            tools:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum " />
+
+        <TextView
+            android:id="@+id/txvLead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/txt_lead"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvSpacexDesciption"
+            app:layout_constraintTop_toBottomOf="@+id/txvSpacexDesciption" />
+
+        <TextView
+            android:id="@+id/txvCeo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_ceo"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvLead"
+            app:layout_constraintTop_toBottomOf="@+id/txvLead" />
+
+        <TextView
+            android:id="@+id/txvCeoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvCeo"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Elon Musk" />
+
+        <TextView
+            android:id="@+id/txvCto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/txt_cto"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvCeo"
+            app:layout_constraintTop_toBottomOf="@+id/txvCeo" />
+
+        <TextView
+            android:id="@+id/txvCtoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvCto"
+            app:layout_constraintEnd_toEndOf="@+id/txvCeoName"
+            tools:text="Elon Musk" />
+
+        <TextView
+            android:id="@+id/txvCtoPropDep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/txt_cto_propulsion_dep"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvCto"
+            app:layout_constraintTop_toBottomOf="@+id/txvCto" />
+
+        <TextView
+            android:id="@+id/txvCtoNamePropDep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvCtoPropDep"
+            app:layout_constraintEnd_toEndOf="@+id/txvCtoName"
+            tools:text="Elon Musk" />
+
+        <TextView
+            android:id="@+id/txvCoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/txt_coo"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvCtoPropDep"
+            app:layout_constraintTop_toBottomOf="@+id/txvCtoPropDep" />
+
+        <TextView
+            android:id="@+id/txvCooName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvCoo"
+            app:layout_constraintEnd_toEndOf="@+id/txvCtoNamePropDep"
+            tools:text="Elon Musk" />
+
+        <TextView
+            android:id="@+id/txvStatistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:text="@string/txt_statistics"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvCoo"
+            app:layout_constraintTop_toBottomOf="@+id/txvCoo" />
+
+        <TextView
+            android:id="@+id/txvValuation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/txt_valuation"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvStatistics"
+            app:layout_constraintTop_toBottomOf="@+id/txvStatistics" />
+
+        <TextView
+            android:id="@+id/txvValuationAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvValuation"
+            app:layout_constraintEnd_toEndOf="@+id/txvCooName"
+            tools:text="275000000" />
+
+        <TextView
+            android:id="@+id/txvEmployees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/txt_employees"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/txvValuation"
+            app:layout_constraintTop_toBottomOf="@+id/txvValuation" />
+
+        <TextView
+            android:id="@+id/txvEmployeesAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvEmployees"
+            app:layout_constraintEnd_toEndOf="@+id/txvValuationAmt"
+            tools:text="7000" />
+
+        <TextView
+            android:id="@+id/txvVehicles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="16dp"
+            android:text="@string/txt_vehicles"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txvEmployees"
+            app:layout_constraintTop_toBottomOf="@+id/txvEmployees" />
+
+        <TextView
+            android:id="@+id/txvVehiclesAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvVehicles"
+            app:layout_constraintEnd_toEndOf="@+id/txvEmployeesAmt"
+            tools:text="3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

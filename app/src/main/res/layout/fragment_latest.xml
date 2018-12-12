@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".view.main.LatestFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".view.main.LatestFragment">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvUpcomingLaunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bottomNavColor">
+
+                <TextView
+                    android:id="@+id/txvUpcomingLaunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:text="@string/txt_upcoming_launch"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txvUpcomingMissionNameHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/txt_mission_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txvUpcomingLaunch" />
+
+                <TextView
+                    android:id="@+id/txvUpcomingMissionName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txvUpcomingMissionNameHeader"
+                    app:layout_constraintTop_toBottomOf="@+id/txvUpcomingMissionNameHeader"
+                    tools:text="GPS IIIA-1" />
+
+                <TextView
+                    android:id="@+id/txvUpcomingMissionDateHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/txt_date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_12"
+                    app:layout_constraintStart_toStartOf="@+id/txvUpcomingMissionName"
+                    app:layout_constraintTop_toBottomOf="@+id/txvUpcomingMissionName" />
+
+                <TextView
+                    android:id="@+id/txvUpcomingMissionDate"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_32"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txvUpcomingMissionDateHeader"
+                    app:layout_constraintTop_toBottomOf="@+id/txvUpcomingMissionDateHeader"
+                    tools:text="03 Nov 2018 9:00 AM" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvPreviousLaunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvUpcomingLaunch">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bottomNavColor">
+
+                <TextView
+                    android:id="@+id/txvPreviousLaunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:text="@string/txt_previous_launch"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txvPreviousMissionNameHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/txt_mission_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txvPreviousLaunch" />
+
+                <TextView
+                    android:id="@+id/txvPreviousMissionName"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txvPreviousMissionNameHeader"
+                    app:layout_constraintTop_toBottomOf="@+id/txvPreviousMissionNameHeader"
+                    tools:text="GPS IIIA-1" />
+
+                <TextView
+                    android:id="@+id/txvPreviousMissionDateHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:text="@string/txt_date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_12"
+                    app:layout_constraintStart_toStartOf="@+id/txvPreviousMissionName"
+                    app:layout_constraintTop_toBottomOf="@+id/txvPreviousMissionName" />
+
+                <TextView
+                    android:id="@+id/txvPreviousMissionDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_32"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txvPreviousMissionDateHeader"
+                    app:layout_constraintTop_toBottomOf="@+id/txvPreviousMissionDateHeader"
+                    tools:text="03 Nov 2018 9:00 AM" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

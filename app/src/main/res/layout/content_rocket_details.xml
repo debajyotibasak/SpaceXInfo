@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/txvRocketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:textColor="@color/white"
+            android:textSize="@dimen/content_heading_txt_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Falcon1" />
+
+        <TextView
+            android:id="@+id/txvDescription"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvRocketName"
+            tools:text="@string/txt_placeholder" />
+
+        <TextView
+            android:id="@+id/txvFirstFlightHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_32"
+            android:text="@string/txt_first_flight"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvDescription"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvFirstFlightDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvFirstFlightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstFlightHeader"
+            tools:text="February 6, 2016"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvCostPerLaunchHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="Cost Per Launch"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="@+id/txvFirstFlightDate"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstFlightDate"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvCostPerLaunchAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvCostPerLaunchHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvCostPerLaunchHeader"
+            tools:text="$90,000,000"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvStatusHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvCostPerLaunchHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvStatusHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvStatusHeader"
+            tools:text="Active"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/topDivider"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/txvStatus"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txvCostPerLaunchAmt"
+            app:layout_constraintTop_toBottomOf="@+id/txvTechnicalSpecsHeader"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvTechnicalSpecsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:text="@string/txt_technical_specifications"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvStatus"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txvHeightHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:text="@string/txt_height"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topDivider" />
+
+        <TextView
+            android:id="@+id/txvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvHeightHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvHeightHeader"
+            tools:text="229.6 ft" />
+
+        <TextView
+            android:id="@+id/txvDiameterHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/txt_diameter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvHeight" />
+
+        <TextView
+            android:id="@+id/txvDiameter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvDiameterHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvDiameterHeader"
+            tools:text="39.5 ft" />
+
+        <TextView
+            android:id="@+id/txvMassHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_mass"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvHeightHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvMass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvMassHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvMassHeader"
+            tools:text="2000 kg" />
+
+        <TextView
+            android:id="@+id/txvStagesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_stages"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvDiameterHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvStages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvStagesHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvStagesHeader"
+            tools:text="2" />
+
+        <View
+            android:id="@+id/technicalDivider"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/txvStages"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txvDiameter"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstStageHeader" />
+
+        <TextView
+            android:id="@+id/txvFirstStageHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:text="@string/txt_first_stage"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvDiameter" />
+
+        <TextView
+            android:id="@+id/txvEnginesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:text="@string/txt_engines"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstStageHeader" />
+
+        <TextView
+            android:id="@+id/txvEngines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvEnginesHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvEnginesHeader"
+            tools:text="21" />
+
+        <TextView
+            android:id="@+id/txvFirstStageFuelAmtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/txt_fuel_amount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvEngines" />
+
+        <TextView
+            android:id="@+id/txvFirstStageFuelAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvFirstStageFuelAmtHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstStageFuelAmtHeader"
+            tools:text="1,111 tons" />
+
+        <TextView
+            android:id="@+id/txvReusableHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/txt_reusable"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvEnginesHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvReusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvReusableHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvReusableHeader"
+            tools:text="false" />
+
+        <TextView
+            android:id="@+id/txvBurnTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_burn_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvFirstStageFuelAmtHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvBurnTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvBurnTimeHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvBurnTimeHeader"
+            tools:text="162 secs" />
+
+        <View
+            android:id="@+id/firstStageDivider"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/txvBurnTime"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txvFirstStageFuelAmt"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageHeader" />
+
+        <TextView
+            android:id="@+id/txvSecondStageHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:text="@string/txt_second_stage"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvFirstStageFuelAmt" />
+
+        <TextView
+            android:id="@+id/txvSecondStageEnginesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:text="@string/txt_engines"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageHeader" />
+
+        <TextView
+            android:id="@+id/txvSecondStageEngines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txvSecondStageEnginesHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageEnginesHeader"
+            tools:text="21" />
+
+        <TextView
+            android:id="@+id/txvSecondStageFuelAmtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/txt_fuel_amount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageEngines" />
+
+        <TextView
+            android:id="@+id/txvSecondStageFuelAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txvSecondStageFuelAmtHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageFuelAmtHeader"
+            tools:text="1,111 tons" />
+
+        <TextView
+            android:id="@+id/txvSecondStageReusableHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_reusable"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvSecondStageEnginesHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvSecondStageReusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvSecondStageReusableHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageReusableHeader"
+            tools:text="false" />
+
+        <TextView
+            android:id="@+id/txvSecondStageBurnTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/txt_burn_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvSecondStageFuelAmtHeader"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txvSecondStageBurnTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txvSecondStageBurnTimeHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txvSecondStageBurnTimeHeader"
+            tools:text="162 secs" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    app:cardBackgroundColor="@color/bottomNavColor"
+    app:cardCornerRadius="@dimen/dimen_4"
+    app:cardElevation="@dimen/dimen_4">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvMissionPatch"
+            android:layout_width="@dimen/mission_patch"
+            android:layout_height="@dimen/mission_patch"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/iconColor" />
+
+        <TextView
+            android:id="@+id/txvMissionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txvMissionDate"
+            app:layout_constraintStart_toEndOf="@+id/imvMissionPatch"
+            app:layout_constraintTop_toTopOf="@+id/imvMissionPatch"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:text="GPS-IIIA" />
+
+        <TextView
+            android:id="@+id/txvMissionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/txvRocketName"
+            app:layout_constraintStart_toStartOf="@+id/txvMissionName"
+            app:layout_constraintTop_toBottomOf="@+id/txvMissionName"
+            tools:text="23 Nov 2018 9:00 AM" />
+
+        <TextView
+            android:id="@+id/txvRocketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imvMissionPatch"
+            app:layout_constraintStart_toStartOf="@+id/txvMissionDate"
+            app:layout_constraintTop_toBottomOf="@+id/txvMissionDate"
+            tools:text="Falcon 1" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

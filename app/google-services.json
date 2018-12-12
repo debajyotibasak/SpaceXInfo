@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "882638888381",
+    "firebase_url": "https://spacexinfo-337b6.firebaseio.com",
+    "project_id": "spacexinfo-337b6",
+    "storage_bucket": "spacexinfo-337b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882638888381:android:cdc45e2d4c71a0d3",
+        "android_client_info": {
+          "package_name": "com.debajyoti.spacexinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882638888381-1ofuvhpnue9hg9tq47smvhfcc9gqg2ij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.debajyoti.spacexinfo",
+            "certificate_hash": "ef5affc92b95d6bcfdb23f757d4d37c4455d104d"
+          }
+        },
+        {
+          "client_id": "882638888381-beo6v25pc8n3ae2f5mcdub38nvp35t5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC424077rN_9l2t09TbIYceIQ8j51zsTYM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882638888381-beo6v25pc8n3ae2f5mcdub38nvp35t5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

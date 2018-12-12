@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202125</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="bottomNavColor">#313236</color>
+    <color name="iconColor">#99addf</color>
+
+    <color name="white">#fafafa</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="link_blue">#03A9F4</color>
+</resources>

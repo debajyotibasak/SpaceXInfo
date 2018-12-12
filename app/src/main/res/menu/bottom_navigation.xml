@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_latest"
+        android:icon="@drawable/ic_latest"
+        android:title="@string/title_latest" />
+
+    <item
+        android:id="@+id/navigation_rockets"
+        android:icon="@drawable/ic_rocket"
+        android:title="@string/title_rocket" />
+
+    <item
+        android:id="@+id/navigation_mission"
+        android:icon="@drawable/ic_mission"
+        android:title="@string/title_mission" />
+
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/ic_info"
+        android:title="@string/title_info" />
+</menu>
