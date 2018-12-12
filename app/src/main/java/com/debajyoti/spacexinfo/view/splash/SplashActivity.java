@@ -62,7 +62,7 @@ public class SplashActivity extends DaggerAppCompatActivity {
                         if (info.getResponse() != null) {
                             getRockets();
                         } else if (info.getT() != null) {
-                            Toast.makeText(this, "Some Error Occurred please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Some Error Occurred please try again" + info.getT().toString(), Toast.LENGTH_SHORT).show();
                             Log.e(TAG, "ERROR: " + info.getT().toString());
                             Crashlytics.log(Log.DEBUG, TAG, info.getT().toString());
                         }
@@ -84,7 +84,7 @@ public class SplashActivity extends DaggerAppCompatActivity {
                         if (rockets.getResponse() != null) {
                             getPastLaunches();
                         } else if (rockets.getT() != null) {
-                            Toast.makeText(this, "Some Error Occurred please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Some Error Occurred please try again" + rockets.getT().toString(), Toast.LENGTH_SHORT).show();
                             Log.e(TAG, "ERROR: " + rockets.getT().toString());
                             Crashlytics.log(Log.DEBUG, TAG, rockets.getT().toString());
                         }
@@ -109,7 +109,7 @@ public class SplashActivity extends DaggerAppCompatActivity {
                         if (pastLaunches.getResponse() != null) {
                             getLatestLaunch();
                         } else if (pastLaunches.getT() != null) {
-                            Toast.makeText(this, "Some Error Occurred please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Some Error Occurred please try again" + pastLaunches.getT().toString(), Toast.LENGTH_SHORT).show();
                             Log.e(TAG, "ERROR: " + pastLaunches.getT().toString());
                             Crashlytics.log(Log.DEBUG, TAG, pastLaunches.getT().toString());
                         }
@@ -140,7 +140,7 @@ public class SplashActivity extends DaggerAppCompatActivity {
                             });
                             getNextLaunch();
                         } else if (latestLaunch.getT() != null) {
-                            Toast.makeText(this, "Some Error Occurred please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Some Error Occurred please try again" + latestLaunch.getT().toString(), Toast.LENGTH_SHORT).show();
                             Log.e(TAG, "ERROR: " + latestLaunch.getT().toString());
                             Crashlytics.log(Log.DEBUG, TAG, latestLaunch.getT().toString());
                         }
@@ -166,7 +166,7 @@ public class SplashActivity extends DaggerAppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                             startActivity(new Intent(SplashActivity.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                         } else if (nextLaunch.getT() != null) {
-                            Toast.makeText(this, "Some Error Occurred please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Some Error Occurred please try again" + nextLaunch.getT().toString(), Toast.LENGTH_SHORT).show();
                             Log.e(TAG, "ERROR: " + nextLaunch.getT().toString());
                             Crashlytics.log(Log.DEBUG, TAG, nextLaunch.getT().toString());
                         }
